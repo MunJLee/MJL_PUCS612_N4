@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# CS612HW4 Release Note
+This is a simple ReactJS SPA exhibition project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### How to Run
+This app is backed with NodeJS and NPM, therefore it is expected for the users to have them installed in their computers. To run, invoke 'npm start' from a terminal or command prompt at the top folder location. 
 
-## Available Scripts
+### Prep
+Learning ReactJS was a requirement for this assignment. Usefulness of the given instructional materials was half and half - some of them good, the others maybe. I still regret reading React.org tutorial for the time lost. Fortunately, I was able to suppliment them through research. 
 
-In the project directory, you can run:
+### Design
+I wanted to make it simple as possible, since most concerning parts were Main section (multiple entry, shared assets) and Nav section (API polling). In order to connect and share, React Router and .json file were used. 
 
-### `npm start`
+Also, Fetch was consciously chosen over Axios for processing polling, because using soon-to-be-standard technology seemed to be a generally godd idea.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Implementation
+I was able to implement all but one of the required features, but working with local .json file was more problematic than it should have been. You may have noticed that the pictures in the Main section article listing are broken - that's because <img> src wouldn't let me feed the string value taken from .json array. It is a legit expression but some issue with Webpack prevents it from working (or I was told). I would appreciate advices on this issue or better way of implementing it. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Another unexpected hard part was obtaining class states after fetching api data. Apprantly the state array would become undefined while updating and if you are constantly ticking it on top of that, it becomes impossible to access or use that state. I had to slice it and dump it to make it stable.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Afterwords
+It was a good exercise and I was finally able to learned about React. I just wish the official documentation was more helpful.

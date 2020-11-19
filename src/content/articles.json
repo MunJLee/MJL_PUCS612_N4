@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "title": "Hot dog, get your hot dog here!",
+        "date": "2020-01-01",
+        "picture": "../image/Hotdog.jpg",
+        "summary": "Simple street food that everyone loves",
+        "detail": "/article_01"
+    },
+    {
+        "id": "02",
+        "title": "Orinigri: Japanese Riceballs",
+        "date": "2020-02-02",
+        "picture": "../image/Onigiri.jpeg",
+        "summary": "Japanese onigiri riceballs are delicious!",
+        "detail": "/article_02"
+    },
+    {
+        "id": "03",
+        "title": "Kobe Beef and its excusite flavors",
+        "date": "2020-03-03",
+        "picture": "../image/KobeBeef.jpg",
+        "summary": "None of us are rich enough to afford it, really.",
+        "detail": "/article_03"
+    }
+]
